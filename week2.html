@@ -6,7 +6,7 @@
   <title>Blog Title</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evSXBKJEiCTixQwlqVALT4zJvc0zdy8+VU1DqhVnQVVzUf0LUHdBPG+iuz7SPH7divazMU@" crossorigin="anonymous">
   <style>
-    .blog-post {
+     .blog-post {
       margin-bottom: 40px;
     }
     .blog-post-title {
@@ -46,11 +46,9 @@
       display: none; 
     }
     .custom-card-class {
-      
       padding: 20px; 
     }
     .custom-card-class .blog-post-image {
-      
       width: 100%; 
       height: auto; 
       margin-bottom: 10px; 
@@ -81,25 +79,32 @@
       border-radius: 50%;
       transition: transform 0.3s ease; 
     }
-    .footer ul li a img:hover {
-      transform: scale(1.1); 
-    }
+    
     .footer p {
       margin: 20px 0; 
       font-size: 14px; 
       opacity: 0.7; 
       font-style: italic; 
     }
-    .footer p span {
-      font-weight: bold; 
-      color: #333; 
-      font-style: normal; 
+    
+   
+      .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
     }
-    @media (min-width: 992px) {
-      .blog-post {
-        max-width: 100%;
-      }
+    .tags span {
+      background-color: white;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+      flex: 1 1 calc(33.333% - 20px); 
+      text-align: center;
     }
+    
   </style>
 </head>
 <body>
@@ -134,7 +139,6 @@
         </div>
       </div>
 
-     
       <div class="col-md-4">
         <div class="card mb-4">
           <h5 class="card-header">About Me</h5>
@@ -147,8 +151,20 @@
         <div class="card mb-4 custom-card-class">
           <h5 class="card-header">Popular Post and Images</h5>
           <div class="card-body">
-            <img src="AI-in-Healthcare.jpg" alt="AI in Healthcare" class="blog-post-image custom-image-size" onclick="toggleContent(1)">
-            <img src="aivehicle.jpg" alt="AI in Autonomous Vehicles" class="blog-post-image custom-image-size" onclick="toggleContent(2)">
+            <img src="AI-in-Healthcare.jpg" alt="AI in Healthcare" class="blog-post-image custom-image-size" >
+            <img src="aivehicle.jpg" alt="AI in Autonomous Vehicles" class="blog-post-image custom-image-size">
+          </div>
+        </div>
+        
+        <div class="card mb-4 custom-card-class">
+          <h5 class="card-header">Tags</h5>
+          <div class="card-body tags">
+            <span>AI</span>
+            <span>ML</span>
+            <span>Healthcare</span>
+            <span>AI Trends</span>
+            <span>Tech Blog</span>
+            <span>Innovation</span>
           </div>
         </div>
       </div>
